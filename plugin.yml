@@ -1,0 +1,49 @@
+name: PlayerInteraction
+main: fr.mrflamme26.playerinteraction.PlayerInteraction
+version: 1.0
+api-version: 1.16
+description: Plugin pour gerer les interactions des joueurs
+author: MrFlamme26
+commands:
+  playerinteraction:
+    description: Voir la liste des commandes
+  reload:
+    description: Recharger le plugin
+    permission: playerinteraction.reload
+permissions:
+  playerinteraction.*:
+    description: Donner toutes les permissions de PlayerInteraction
+    children:
+      playerinteraction.reload: true
+      playerinteraction.blockPlace: true
+      playerinteraction.blockBreak: true
+      playerinteraction.itemPickup: true
+      playerinteraction.itemDrop: true
+      playerinteraction.trapdoor: true
+  -playerinteraction.*:
+    description: Interdire toutes les permissions de PlayerInteraction
+    children:
+      playerinteraction.reload: false
+      playerinteraction.blockPlace: false
+      playerinteraction.blockBreak: false
+      playerinteraction.itemPickup: false
+      playerinteraction.itemDrop: false
+      playerinteraction.trapdoor: false
+  playerinteraction.reload:
+    description: Permet de recharger le plugin
+    default: op
+  playerinteraction.blockPlace:
+    description: Permet de placer des blocks
+    default: op
+  playerinteraction.blockBreak:
+    description: Permet de casser des blocks
+    default: op
+  playerinteraction.itemPickup:
+    description: Permet de ramasser des items
+    default: op
+  playerinteraction.itemDrop:
+    description: Permet de dropper des items
+    default: op
+  playerinteraction.trapdoor:
+    description: Permet d'utiliser les trappes
+    default: op
