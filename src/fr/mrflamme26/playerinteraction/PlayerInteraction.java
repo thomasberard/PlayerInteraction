@@ -95,4 +95,15 @@ public class PlayerInteraction extends JavaPlugin implements Listener {
 
 		}
 	}
+	
+	@EventHandler
+	public void onPlayerInteract(PlayerInteractEvent event){
+		Player player = event.getPlayer();
+		
+		if (!player.isOp() || !player.hasPermission("playerinteraction.farmland")) {
+			if (event.getAction().equals(Action.PHYSICAL) && event.getClickedBlock().getType().equals(Material.FARMLAND)) {
+				  event.setCancelled(true);
+			}
+		}
+	}
 }

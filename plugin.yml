@@ -20,6 +20,7 @@ permissions:
       playerinteraction.itemPickup: true
       playerinteraction.itemDrop: true
       playerinteraction.trapdoor: true
+      playerinteraction.farmland: true
   -playerinteraction.*:
     description: Interdire toutes les permissions de PlayerInteraction
     children:
@@ -29,6 +30,7 @@ permissions:
       playerinteraction.itemPickup: false
       playerinteraction.itemDrop: false
       playerinteraction.trapdoor: false
+      playerinteraction.farmland: false
   playerinteraction.reload:
     description: Permet de recharger le plugin
     default: op
@@ -46,4 +48,7 @@ permissions:
     default: op
   playerinteraction.trapdoor:
     description: Permet d'utiliser les trappes
+    default: op
+  playerinteraction.farmland:
+    description: Permet d'interagir avec les cultures
     default: op
